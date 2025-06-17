@@ -32,20 +32,25 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.11'
-
     - name: Install requirements
       run: |
         pip install -r env_416312/requirements.txt
 
-    - name: Run app in background and wait
+    # --- POPRAWIONY KROK ---
+    # Uruchomienie aplikacji i testów musi być w jednym kroku,
+    # aby proces aplikacji nie został zakończony przed startem testów.
+    - name: Run app and functional tests
       working-directory: ./env_416312
       run: |
+        # Uruchom aplikację w tle
         python main/app.py &
+        
+        # Poczekaj chwilę, aby serwer zdążył się uruchomić
+        echo "Waiting for the app to start..."
         sleep 5
-
-    - name: Functional tests
-      working-directory: ./env_416312
-      run: |
+        echo "App should be running. Starting functional tests."
+        
+        # Uruchom testy funkcjonalne
         pytest main/app_test.py
 
   deployment:
