@@ -17,7 +17,8 @@ jobs:
         python-version: '3.11'
     - name: Install requirements
       run: |
-        pip install -r env_416312/requirements.txt
+        # POPRAWKA: Instaluj z requirements.txt w głównym katalogu
+        pip install -r requirements.txt
     - name: Run unit tests
       run: |
         pytest env_416312/main/calculator_test.py
@@ -34,7 +35,6 @@ jobs:
         python-version: '3.11'
 
     - name: Install requirements
-      working-directory: ./env_416312
       run: |
         pip install -r requirements.txt
 
