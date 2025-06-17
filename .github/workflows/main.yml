@@ -32,16 +32,22 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.11'
+
     - name: Install requirements
+      working-directory: ./env_416312
       run: |
-        pip install -r env_416312/requirements.txt
-    - name: Run app
+        pip install -r requirements.txt
+
+    - name: Run app in background and wait
+      working-directory: ./env_416312
       run: |
         python main/app.py &
         sleep 5
+
     - name: Functional tests
+      working-directory: ./env_416312
       run: |
-        pytest env_416312/main/app_test.py
+        pytest main/app_test.py
 
   deployment:
     needs: functional_test

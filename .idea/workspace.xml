@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="700ad59e-e9b3-4802-a36b-928242c527f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/env_416312/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/env_416312/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750157203390</updated>
-      <workItem from="1750157204428" duration="1981000" />
+      <workItem from="1750157204428" duration="2361000" />
     </task>
     <servers />
   </component>
