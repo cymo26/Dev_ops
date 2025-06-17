@@ -71,6 +71,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./dockerfile
+          file: env_416312/dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME_416312 }}/dev_ops_laby:latest
